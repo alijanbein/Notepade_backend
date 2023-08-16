@@ -16,7 +16,7 @@ exports.login = async (req, res, next) => {
     return next(error);
   }
 
-  const token = jwt.sign({ userExist }, process.env.SECRET);
+  const token = jwt.sign({ userExist }, "SECRETdawdaswdsawd");
   res.send({ status: "sucess", user: userExist, token: token });
 };
 
